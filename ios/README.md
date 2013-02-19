@@ -23,13 +23,13 @@ Moodstocks [PhoneGap](http://phonegap.com/) plugin for iOS platform enables deve
       * `MSActivityView.{h,m}`
       * `MSHandler.{h,m}`
 
-2. `open ios/SampleProject/PhonegapDemo.xcodeproj/`
+2. `open ios/Demo/Demo.xcodeproj/`
 
 3. Download [Moodstocks SDK for iOS](https://developers.moodstocks.com/downloads) and add it to your Xcode project.
 
   > NOTE: a detailed [How-To](https://developers.moodstocks.com/doc/tuto-ios/3) can be found in our Developers Center. You can also use our [Cocoa pod](http://cocoapods.org/?q=Moodstocks) if you prefer.
 
-4. Copy `MoodstocksPlugin.js` into `ios/SampleProject/www/js`.
+4. Copy `MoodstocksPlugin.js` into `ios/Demo/www/js`.
 
 5. Configure your API key and API secret in `Plugins/MoodstocksPlugin.m`.
 
