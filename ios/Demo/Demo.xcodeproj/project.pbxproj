@@ -46,6 +46,7 @@
 		971BABB916D37A4300E54F16 /* MSHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 971BABB216D37A4300E54F16 /* MSHandler.m */; };
 		971BABBA16D37A4300E54F16 /* MSOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 971BABB416D37A4300E54F16 /* MSOverlayView.m */; };
 		971BABBB16D37A4300E54F16 /* MSScannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 971BABB616D37A4300E54F16 /* MSScannerController.m */; };
+		971BABDC16D37B9700E54F16 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971BABDB16D37B9700E54F16 /* CoreVideo.framework */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		F840E1F1165FE0F500CFE078 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
 /* End PBXBuildFile section */
@@ -117,6 +118,7 @@
 		971BABB416D37A4300E54F16 /* MSOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSOverlayView.m; path = ../../../MSOverlayView.m; sourceTree = "<group>"; };
 		971BABB516D37A4300E54F16 /* MSScannerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSScannerController.h; path = ../../../MSScannerController.h; sourceTree = "<group>"; };
 		971BABB616D37A4300E54F16 /* MSScannerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSScannerController.m; path = ../../../MSScannerController.m; sourceTree = "<group>"; };
+		971BABDB16D37B9700E54F16 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = Demo/config.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				971BABDC16D37B9700E54F16 /* CoreVideo.framework in Frameworks */,
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
@@ -229,6 +232,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				971BABDB16D37B9700E54F16 /* CoreVideo.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
@@ -504,6 +508,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Demo/Demo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = Demo;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -522,6 +530,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Demo/Demo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = Demo;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
