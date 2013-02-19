@@ -57,7 +57,6 @@ Then:
   * QuartzCore.framework
 
 4. Copy the files below into the corresponding folders in your project :
-
   * Copy `MoodstocksPlugin.js` to `/path/to/project/www/js`
   * Open Xcode and drag drop `MoodstocksPlugin.h` and `MoodstocksPlugin.m` files to `/path/to/project/YourProjectName/Plugins` in your project
 
