@@ -21,22 +21,110 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
     </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+    <body onload="onBodyLoad()">
+        <div class="container">
+            <div id="title">Moodstocks Scanner</div>
+            <ul id="scanoption" class="block">
+                <li>Choose scan options:</li>
+                <li><input id="image" type="checkbox" name="image" value="image" disabled="disabled" checked="checked" />Image</li>
+                <li><input id="ean8" type="checkbox" name="ean8" value="ean8" /> EAN8 </li>
+                <li><input id="ean13" type="checkbox" name="ean13" value="ean13" /> EAN13 </li>
+                <li><input id="qrcode" type="checkbox" name="qrcode" value="qrcode" /> QR Code </li>
+                <li><input id="dmtx" type="checkbox" name="dmtx" value="dmtx" /> Datamatrix </li>
+            </ul>
+
+            <div id="openStatus" class="block"></div>
+            <div id="syncStatus" class="block"></div>
+            <div id="result" class="block">
+                <span>Scan result:</span>
+                <div id="resultFormat">n/a</div>
+                <div id="resultValue">n/a</div>
             </div>
+
+            <div style="text-align:center;">
+                <button type="button" id="scanButton">Scan</button>
+            </div>
+
         </div>
         <script type="text/javascript" src="cordova-2.3.0.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/MoodstocksPlugin.js"></script>
         <script type="text/javascript">
-            app.initialize();
+            function onBodyLoad() {
+                document.addEventListener("deviceready", onDeviceReady, false);
+
+                scanButton = document.getElementById("scanButton");
+                openStatusLabel = document.getElementById("openStatus");
+                syncStatusLabel = document.getElementById("syncStatus");
+
+                resultFormat = document.getElementById("resultFormat");
+                resultValue = document.getElementById("resultValue");
+            }
+
+            // Sync scanner callbacks
+            function syncInProgress(progress) {
+                syncStatusLabel.innerHTML = "syncing..." + progress + "%";
+                syncStatusLabel.style.backgroundColor = "#349DF4";
+            }
+
+            function syncFinished() {
+                syncStatusLabel.innerHTML = "Sync finished!";
+                syncStatusLabel.style.backgroundColor = "#80AC3B";
+            }
+
+            function syncFailure(message) {
+                syncStatusLabel.innerHTML = JSON.stringify(message);
+                syncStatusLabel.style.backgroundColor = "red";
+            }
+
+            // Open scanner callbacks
+            function openSuccess(result) {
+                openStatusLabel.innerHTML = result;
+                scanButton.style.display = "inline";
+                MoodstocksPlugin.sync(null, syncInProgress, syncFinished, syncFailure);
+            }
+
+            function openFailure(result) {
+                openStatusLabel.innerHTML = result;
+                openStatusLabel.style.backgroundColor = "red";
+                scanButton.style.display = "none";
+            }
+
+            // Get the scan formats
+            function buildScanOptions() {
+                return scanOptions = {
+                    image: document.getElementById("image").checked,
+                    ean8: document.getElementById("ean8").checked,
+                    ean13: document.getElementById("ean13").checked,
+                    qrcode: document.getElementById("qrcode").checked,
+                    dmtx: document.getElementById("dmtx").checked
+                };
+            }
+
+            // Scan callbacks
+            function scanSuccess(format, value) {
+                resultFormat.innerHTML = JSON.stringify(format);
+                resultValue.innerHTML = JSON.stringify(value);
+            }
+
+            function scanFailure(result) {
+                resultSpan.innerHTML = "Failure: " + JSON.stringify(result);
+            }
+
+            // Scan button
+            function clickScan() {
+                MoodstocksPlugin.scan(scanSuccess, scanFailure, buildScanOptions());
+            }
+
+            function onDeviceReady() {
+                // open the scanner setting your apikey & apisecrect
+                MoodstocksPlugin.open(openSuccess, openFailure);
+                scanButton.addEventListener("click", clickScan, false);
+            }
+
         </script>
     </body>
 </html>
