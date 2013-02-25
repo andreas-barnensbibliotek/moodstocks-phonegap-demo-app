@@ -108,10 +108,10 @@ var MoodstocksPlugin = {
             for (strFormat in scanFormats) {
                 if (result.format === scanFormats[strFormat]) {
                     success.call(null, resultFormats[strFormat], result.value);
-                    break;
+                    return;
                 }
-                success.call(null, resultFormats.none, null);
             }
+            success.call(null, resultFormats.none, null);
         }
 
         if (!fail) {
