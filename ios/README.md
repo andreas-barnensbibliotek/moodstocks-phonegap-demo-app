@@ -27,7 +27,7 @@ Moodstocks [PhoneGap](http://phonegap.com/) plugin for iOS platform enables deve
 
 3. Download [Moodstocks SDK for iOS](https://developers.moodstocks.com/downloads) and add it to your Xcode project.
 
-  > NOTE: a detailed [How-To](https://developers.moodstocks.com/doc/tuto-ios/3) can be found in our Developers Center. You can also use our [Cocoa pod](http://cocoapods.org/?q=Moodstocks) if you prefer.
+  > NOTE: a detailed [How-To](https://developers.moodstocks.com/doc/tuto-ios-choose-package) can be found in our Developers Center.
 
 4. Copy `MoodstocksPlugin.js` into `ios/Demo/www/js`.
 
