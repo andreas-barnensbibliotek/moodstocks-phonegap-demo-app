@@ -58,7 +58,7 @@ Then:
 
 4. Copy the files below into the corresponding folders in your project :
   * Copy `MoodstocksPlugin.js` to `/path/to/project/www/js`
-  * Open Xcode and drag drop `MoodstocksPlugin.h` and `MoodstocksPlugin.m` files to `/path/to/project/YourProjectName/Plugins` in your project
+  * Open Xcode and drag drop `MoodstocksPlugin.h`, `MoodstocksPlugin.m` and other native resources files(`MSScannerController.{h,m}`, `MSOverlayView.{h,m}`, `MSActivityView.{h,m}`, `MSHandler.{h,m}`) to `/path/to/project/YourProjectName/Plugins` in your project
 
 5. Add our plugin under the ```<plugins>``` tag of your project's `config.xml` file.
 
