@@ -28,7 +28,7 @@
     <body onload="onBodyLoad()">
         <div id="container">
             <div id="menuContainer">
-                <div id="controlPanel">
+                <div id="menu">
                     <div id="title">Moodstocks Scanner</div>
                     <ul id="scanoption" class="block">
                         <li>Choose scan options:</li>
@@ -51,7 +51,7 @@
             </div>
 
             <div id="overlayContainer">
-                <div id="infoPanel">
+                <div id="overlay">
                     <div class="infoblock">One object/barcode at a time</div>
                     <div class="infoblock">Place it upright</div>
                 </div>
@@ -115,12 +115,14 @@
                 };
             }
 
-            var scannerOff = function() {
+            // When scanner is dismissed, display the menu and hide the overlay
+            function scannerOff() {
                 overlayContainer.style.display = "none";
                 menuContainer.style.display = "inline";
             }
 
-            var scannerOn = function() {
+            // When scanner is launched, hide the menu and show the overlay
+            function scannerOn() {
                 overlayContainer.style.display = "inline";
                 menuContainer.style.display = "none";
             }
