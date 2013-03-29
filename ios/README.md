@@ -16,11 +16,11 @@ Moodstocks [PhoneGap](http://phonegap.com/) plugin for iOS platform enables deve
 0. Get [Moodstocks PhoneGap plugin for iOS](https://github.com/Moodstocks/moodstocks-phonegap-plugin/ios)
 
   > NOTE: Our PhoneGap plugin is composed by
-    * `MoodstocksPlugin.js`
-    * `MoodstocksPlugin.{h,m}`
+    * MoodstocksPlugin.js
+    * MoodstocksPlugin.{h,m}
     * Other native resources:
-      * `MSScannerController.{h,m}`
-      * `MSHandler.{h,m}`
+      * MSScannerController.{h,m}
+      * MSHandler.{h,m}
 
 1. Git clone this repo.
 2. `open ios/Demo/Demo.xcodeproj/`

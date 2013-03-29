@@ -1,12 +1,41 @@
 # Moodstocks SDK - PhoneGap sample apps
 
-PhoneGap plugins and sample applications for the Moodstocks SDK. So far we only support the iOS platform (tested with PhoneGap v2.3).
+PhoneGap plugins and sample applications for the Moodstocks SDK. So far we only support the iOS platform (tested with PhoneGap v2.3). This repository is made of:
 
-## Real-time on-device image recognition SDK
+* `www`: the demo (common to iOS and Android environments)
+* `ios`: the specific PhoneGap project for iOS
+* `android`: the specific PhoneGap project for Android
 
-The Moodstocks SDK provides a scanner for mobile devices. It recognizes both barcodes and images. Scanning operates on the client-side which lets you create nice augmented reality overlays. Also it even works off-line thanks to a built-in, easy-to-use on-device image signatures synchronization.
+Each of them contains a detailed README to help you get started.
 
-To get started (for free!) create an account on [Moodstocks Developer Center](https://developers.moodstocks.com/) and follow the instructions.
+## Feature: Web view as overlay!
+
+Generally speaking, we take the default web view and insert it into our scanner view.
+
+  * You can personalize the overlay very easily. Just modify the html content inside the div `#overlayContainer` in `index.hmtl`
+
+  * UI toggle.
+    * When the scanner is launched, in order to have an overlay floating above the camera view you need to hide the menu.
+
+    ```javascript
+    // When scanner is launched, hide the menu and show the overlay
+    function scannerOn() {
+        overlayContainer.style.display = "inline";
+        menuContainer.style.display = "none";
+    }
+    ```
+
+    * Correspondingly when the scanner is dismissed you need to restore the menu and hide the overlay.
+
+    ```javascript
+    // When scanner is dismissed, display the menu and hide the overlay
+    function scannerOff() {
+        overlayContainer.style.display = "none";
+        menuContainer.style.display = "inline";
+    }
+    ```
+
+    > Workaround for the background color: Don't put apply any css to the container that you need to hide.
 
 ## Help
 
