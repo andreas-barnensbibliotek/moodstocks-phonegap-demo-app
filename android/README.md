@@ -23,17 +23,23 @@ Moodstocks [PhoneGap](http://phonegap.com/) plugin for Android platform enables 
     * Resources related to these 2 activity
 
 1. Git clone this repo.
-2. Import our demo project into your preferred IDE.
+
+1. Open the repo and copy everything inside `www` folder to `android/Demo/assets/www`.
+
+2. Use your preferred IDE to open the android project.
 
 3. Set up the Moodstocks SDK: please refere to this [step-by-step tutorial](https://developers.moodstocks.com/doc/tuto-android/1).
 
-4. Copy all the files inside `www` folder to `android/Demo/assets/www`.
-4. Copy `MoodstocksPlugin.js` into `android/Demo/assets/www/js`.
-4. Copy these files into package `com.moodstocks.phonegap.plugin`:
-  * MoodstocksPlugin.java
-  * MoodstocksScanActivity.java
-  * MoodstocksOverlay.java
-4. Replace `Demo.java` in `com.moodstocks.phonegap.demo` by `Demo.java` in our plugin folder.
+4. Open the plugin repo and copy `MoodstocksPlugin.js` into `android/Demo/assets/www/js`.
+
+4. Drag and drop `android/src` folder to your project.
+
+  * Following 3 files will be added to `com.moodstocks.phonegap.plugin`:
+      * MoodstocksPlugin.java
+      * MoodstocksScanActivity.java
+      * MoodstocksOverlay.java
+
+  * `Demo.java` inside `com.moodstocks.phonegap.demo` will be updated.
 
 5. Configure your API key & secret in `MoodstocksPlugin.java` which can be found inside the package `com.moodstocks.phonegap.plugin`
 

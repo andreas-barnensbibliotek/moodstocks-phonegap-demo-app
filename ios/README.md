@@ -23,14 +23,15 @@ Moodstocks [PhoneGap](http://phonegap.com/) plugin for iOS platform enables deve
       * MSHandler.{h,m}
 
 1. Git clone this repo.
+1. Open the repo and copy everything inside `www` folder to `ios/Demo/www`.
+
 2. `open ios/Demo/Demo.xcodeproj/`
 
-3. Download [Moodstocks SDK for iOS](https://developers.moodstocks.com/downloads) and add it to your Xcode project.
+3. Set up [Moodstocks SDK for iOS](https://developers.moodstocks.com/downloads) in your Xcode project.
 
   > NOTE: a detailed [How-To](https://developers.moodstocks.com/doc/tuto-ios/1) can be found in our Developers Center.
 
-4. Copy all the files inside `www` folder to `ios/Demo/www`.
-4. Copy `MoodstocksPlugin.js` into `ios/Demo/www/js`.
+4. Open the plugin repo and copy `MoodstocksPlugin.js` into `ios/Demo/www/js`.
 4. Open Xcode and drag drop `MoodstocksPlugin.h`, `MoodstocksPlugin.m` and other native resources files(`MSScannerController.{h,m}`, `MSHandler.{h,m}`) to `Plugins` folder in your project.
 
 5. Configure your API key and API secret in `Plugins/MoodstocksPlugin.m`.
