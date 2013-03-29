@@ -12,24 +12,26 @@ Moodstocks [PhoneGap](http://phonegap.com/) plugin for iOS platform enables deve
 
 ## Test the demo
 
-1. Git clone this repo.
+
+0. Get [Moodstocks PhoneGap plugin for iOS](https://github.com/Moodstocks/moodstocks-phonegap-plugin/ios)
 
   > NOTE: Our PhoneGap plugin is composed by
     * `MoodstocksPlugin.js`
     * `MoodstocksPlugin.{h,m}`
     * Other native resources:
       * `MSScannerController.{h,m}`
-      * `MSOverlayView.{h,m}`
-      * `MSActivityView.{h,m}`
       * `MSHandler.{h,m}`
 
+1. Git clone this repo.
 2. `open ios/Demo/Demo.xcodeproj/`
 
 3. Download [Moodstocks SDK for iOS](https://developers.moodstocks.com/downloads) and add it to your Xcode project.
 
   > NOTE: a detailed [How-To](https://developers.moodstocks.com/doc/tuto-ios/1) can be found in our Developers Center.
 
+4. Copy all the files inside `www` folder to `ios/Demo/www`.
 4. Copy `MoodstocksPlugin.js` into `ios/Demo/www/js`.
+4. Open Xcode and drag drop `MoodstocksPlugin.h`, `MoodstocksPlugin.m` and other native resources files(`MSScannerController.{h,m}`, `MSHandler.{h,m}`) to `Plugins` folder in your project.
 
 5. Configure your API key and API secret in `Plugins/MoodstocksPlugin.m`.
 
@@ -58,7 +60,7 @@ Then:
 
 4. Copy the files below into the corresponding folders in your project :
   * Copy `MoodstocksPlugin.js` to `/path/to/project/www/js`
-  * Open Xcode and drag drop `MoodstocksPlugin.h`, `MoodstocksPlugin.m` and other native resources files(`MSScannerController.{h,m}`, `MSOverlayView.{h,m}`, `MSActivityView.{h,m}`, `MSHandler.{h,m}`) to `/path/to/project/YourProjectName/Plugins` in your project
+  * Open Xcode and drag drop `MoodstocksPlugin.h`, `MoodstocksPlugin.m` and other native resources files(`MSScannerController.{h,m}`, `MSHandler.{h,m}`) to `/path/to/project/YourProjectName/Plugins` in your project
 
 5. Add our plugin under the ```<plugins>``` tag of your project's `config.xml` file.
 
@@ -66,9 +68,9 @@ Then:
   <plugin name="MoodstocksPlugin" value="MoodstocksPlugin" />
   ```
 
-6. Update your API key and API secret in `MoodstocksPlugin.m` (see point 4 in section `Test the demo`).
+6. Update your API key and API secret in `MoodstocksPlugin.m`.
 
-7. Construct your application by using different web technologies, refer to `index.html` in our sample project if you are not sure how to use the plugin.
+7. Construct your application (a.k.a the `www` folder) by using different web technologies. Refer to `index.html` in our sample project if you are not sure how to use the plugin.
 
 7. Build and run the application on your device.
 
