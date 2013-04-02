@@ -1,15 +1,1 @@
 *.DS_Store
-
-# Ignore Moodstocks SDK
-
-ios/Demo/libmoodstocks-sdk.a
-ios/Demo/moodstocks_sdk.h
-ios/Demo/Obj-C/
-
-# Ignore Xcode files
-
-ios/Demo/Demo.xcodeproj/project.xcworkspace/xcuserdata/
-ios/Demo/Demo.xcodeproj/xcuserdata/
-ios/Demo/CordovaLib/CordovaLib.xcodeproj/xcuserdata/
-
-ios/Demo/www/js/MoodstocksPlugin.js
