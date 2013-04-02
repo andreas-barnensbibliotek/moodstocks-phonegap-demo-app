@@ -1,4 +1,4 @@
-# Moodstocks PhoneGap plugin for Android
+# Moodstocks PhoneGap Demo for Android
 
 Moodstocks [PhoneGap](http://phonegap.com/) plugin for Android platform enables developers to embed Moodstocks scanner into a PhoneGap application. Along with the plugin we provide a sample application to help you get started.
 
@@ -24,15 +24,17 @@ Moodstocks [PhoneGap](http://phonegap.com/) plugin for Android platform enables 
 
 1. Git clone this repo.
 
-1. Open the repo and copy everything inside `www` folder to `android/Demo/assets/www`.
+2. Open the repo and copy everything inside `www` folder to `android/Demo/assets/www`.
 
-2. Use your preferred IDE to open the android project.
+3. Use your preferred IDE to open the android project.
 
-3. Set up the Moodstocks SDK: please refere to this [step-by-step tutorial](https://developers.moodstocks.com/doc/tuto-android/1).
+4. Set up the Moodstocks SDK in this project.
 
-4. Open the plugin repo and copy `MoodstocksPlugin.js` into `android/Demo/assets/www/js`.
+  > NOTE: a detailed [How-To](https://developers.moodstocks.com/doc/tuto-android/1) can be found in our Developers Center.
 
-4. Drag and drop `android/src` folder to your project.
+5. Open the plugin repo and copy `MoodstocksPlugin.js` into `android/Demo/assets/www/js`.
+
+6. Drag and drop `android/src` folder to your project.
 
   * Following 3 files will be added to `com.moodstocks.phonegap.plugin`:
       * MoodstocksPlugin.java
@@ -41,7 +43,7 @@ Moodstocks [PhoneGap](http://phonegap.com/) plugin for Android platform enables 
 
   * `Demo.java` inside `com.moodstocks.phonegap.demo` will be updated.
 
-5. Configure your API key & secret in `MoodstocksPlugin.java` which can be found inside the package `com.moodstocks.phonegap.plugin`
+7. Configure your API key & secret in `MoodstocksPlugin.java` which can be found inside the package `com.moodstocks.phonegap.plugin`
 
   ```
   //--------------------------------
@@ -51,7 +53,7 @@ Moodstocks [PhoneGap](http://phonegap.com/) plugin for Android platform enables 
   private static final String API_SECRET = "";
   ```
 
-6. Build and run the application on your android device.
+8. Build and run the application on your android device.
 
 ## Create your own project from scratch
 
@@ -65,14 +67,18 @@ If you've never used PhoneGap before, please check out their [Android Get Starte
 
 2. Set up Moodstocks SDK. (see point 3 in the section above)
 
-3. Create a package called `com.moodstocks.phonegap.plugin` and copy these files into it:
+3. Create a package with name `com.moodstocks.phonegap.plugin` and copy these files into it:
   * MoodstocksPlugin.java
   * MoodstocksScanActivity.java
   * MoodstocksOverlay.java
 
-4. Replace your main activity class `Demo.java` of package `com.example.phonegap.demo` by our `Demo.java` in the plugin folder.
+4. Replace your main activity class `Demo.java` of package `com.example.phonegap.demo` by our `Demo.java` in the plugin folder `android/src/com/moodstocks/phonegap/demo`. It overrides several functions of `DroidGap`
+  * Method `init()`
+  * Method `onPause()`
+  * Method `onResume()`
+  * Method `startActivityForResult(CordovaPlugin command, Intent intent, int requestCode)`
 
-4. Add related resources of `MoodstocksScanActivity.java` and `MoodstocksOverlay.java` into your project
+5. Add related resources of `MoodstocksScanActivity.java` and `MoodstocksOverlay.java` into your project
   * Copy `scan.xml` into `res/layout`
   * Add this line in `res/values/strings.xml`
 
@@ -91,15 +97,15 @@ If you've never used PhoneGap before, please check out their [Android Get Starte
     </activity>
     ```
 
-5. Add MoodstocksPlugin's mapping in `res/xml/config.xml`
+6. Add MoodstocksPlugin's mapping in `res/xml/config.xml`
 
   ```xml
   <plugin name="MoodstocksPlugin" value="com.moodstocks.phonegap.plugin.MoodstocksPlugin" />
   ```
 
-6. Refer to `www/index.html` in our demo as an example and create your own applications
-7. Configure your API key & secret in `MoodstocksPlugin.java`.
-7. Then you can launch your application!
+7. Refer to `www/index.html` in our demo as an example and create your own applications
+8. Configure your API key & secret in `MoodstocksPlugin.java`.
+9. Then you can launch your application!
 
 ## Help
 

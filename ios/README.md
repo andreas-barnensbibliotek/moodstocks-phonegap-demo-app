@@ -1,10 +1,10 @@
-# Moodstocks PhoneGap plugin for iOS
+# Moodstocks PhoneGap Demo for iOS
 
 Moodstocks [PhoneGap](http://phonegap.com/) plugin for iOS platform enables developers to embed Moodstocks scanner into a PhoneGap application. Along with the plugin we provide a sample application to help you get started.
 
 ## Prerequisites
 
-* An iOS development environment.
+* iOS development environment.
 * A Moodstocks [developer account](https://developers.moodstocks.com/register).
 * [PhoneGap v2.3.0](http://phonegap.com/download/) downloaded.
 
@@ -23,25 +23,27 @@ Moodstocks [PhoneGap](http://phonegap.com/) plugin for iOS platform enables deve
       * MSHandler.{h,m}
 
 1. Git clone this repo.
-1. Open the repo and copy everything inside `www` folder to `ios/Demo/www`.
 
-2. `open ios/Demo/Demo.xcodeproj/`
+2. Open the repo and copy everything inside `www` folder to `ios/Demo/www`.
 
-3. Set up [Moodstocks SDK for iOS](https://developers.moodstocks.com/downloads) in your Xcode project.
+3. `open ios/Demo/Demo.xcodeproj/`
+
+4. Set up [Moodstocks SDK for iOS](https://developers.moodstocks.com/downloads) in this Xcode project.
 
   > NOTE: a detailed [How-To](https://developers.moodstocks.com/doc/tuto-ios/1) can be found in our Developers Center.
 
-4. Open the plugin repo and copy `MoodstocksPlugin.js` into `ios/Demo/www/js`.
-4. Open Xcode and drag drop `MoodstocksPlugin.h`, `MoodstocksPlugin.m` and other native resources files(`MSScannerController.{h,m}`, `MSHandler.{h,m}`) to `Plugins` folder in your project.
+5. Open the plugin repo and copy `MoodstocksPlugin.js` into `ios/Demo/www/js`.
 
-5. Configure your API key and API secret in `Plugins/MoodstocksPlugin.m`.
+6. Open Xcode and drag drop `MoodstocksPlugin.h`, `MoodstocksPlugin.m` and other native resources files(`MSScannerController.{h,m}`, `MSHandler.{h,m}`) to `Plugins` folder in your project.
+
+7. Configure your API key and API secret in `Plugins/MoodstocksPlugin.m`.
 
   ```objective-c
     #define MS_API_KEY @"ApIkEy"
     #define MS_API_SEC @"ApIsEcReT"
   ```
 
-6. Build and run the application on your device.
+8. Build and run the application on your device.
 
 ## Create your own project from scratch
 
@@ -51,7 +53,7 @@ Then:
 
 1. Create a PhoneGap project.
 
-2. Add Moodstocks SDK to your Xcode project (see point 2 in section `Test the demo`).
+2. Set up [Moodstocks SDK for iOS](https://developers.moodstocks.com/downloads) in your Xcode project.
 
 3. Click on your project > `TARGETS` > `Build Phases` tab, then open the list of `Link Binary With Libraries` and add `CoreVideo.framework` to your library. Then make sure you have all these 4 libraries in the list:
   * AVFoundation.framework

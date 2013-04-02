@@ -1,6 +1,6 @@
-# Moodstocks SDK - PhoneGap sample apps
+# Moodstocks SDK - PhoneGap demo apps
 
-PhoneGap plugins and sample applications for the Moodstocks SDK. So far we only support the iOS platform (tested with PhoneGap v2.3). This repository is made of:
+This repository is made of:
 
 * `www`: the demo (common to iOS and Android environments)
 * `ios`: the specific PhoneGap project for iOS
@@ -10,12 +10,12 @@ Each of them contains a detailed README to help you get started.
 
 ## Feature: Web view as overlay!
 
-Generally speaking, we take the default web view and insert it into our scanner view.
+Instead of using a native overlay to display help information, we take advantage of PhoneGap and use a web view as an overlay.
 
-  * You can personalize the overlay very easily. Just modify the html content inside the div `#overlayContainer` in `index.hmtl`
+  * You can personalize the overlay very easily. Just modify the html content inside the div `#overlayContainer` in `index.html`
 
-  * UI toggle.
-    * When the scanner is launched, in order to have an overlay floating above the camera view you need to hide the menu.
+  * You need to do a UI toggle to use it correctly.
+    * When the scanner is launched, in order to have an overlay floating above the camera view you will need to hide the menu. This is what we do in our demo:
 
     ```javascript
     // When scanner is launched, hide the menu and show the overlay
@@ -25,7 +25,7 @@ Generally speaking, we take the default web view and insert it into our scanner 
     }
     ```
 
-    * Correspondingly when the scanner is dismissed you need to restore the menu and hide the overlay.
+    * Correspondingly when the scanner is dismissed you will need to restore the menu and hide the overlay:
 
     ```javascript
     // When scanner is dismissed, display the menu and hide the overlay
@@ -35,7 +35,10 @@ Generally speaking, we take the default web view and insert it into our scanner 
     }
     ```
 
-    > Workaround for the background color: Don't put apply any css to the container that you need to hide.
+    > Workaround for the background color issue: Don't put apply any css to the container that you need to toggle.
+
+
+  * If you are looking for something more interactive, for example, display scan result on the overlay, you can check out [our Sencha Touch Demo](https://github.com/Moodstocks/moodstocks-sencha-demo-app).
 
 ## Help
 
