@@ -32,11 +32,6 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>res/layout/scan.xml</name>
-			<type>1</type>
-			<locationURI>PARENT-3-ECLIPSE_HOME/phonegap/GithubRepo/moodstocks-phonegap-demo-app/plugin/android/scan.xml</locationURI>
-		</link>
-		<link>
 			<name>src/com/moodstocks/phonegap/demo/Demo.java</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/plugin/android/Demo.java</locationURI>
