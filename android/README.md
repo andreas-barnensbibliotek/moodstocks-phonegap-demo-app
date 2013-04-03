@@ -12,36 +12,26 @@ Moodstocks [PhoneGap](http://phonegap.com/) plugin for Android platform enables 
 
 ## Test the demo
 
-0. Get [Moodstocks PhoneGap plugin for Android](https://github.com/Moodstocks/moodstocks-phonegap-plugin/android)
-
-  > NOTE: Our PhoneGap plugin is composed by
-    * MoodstocksPlugin.js
-    * MoodstocksPlugin.java
-    * MoodstocksScanActivity.java
-    * MoodstocksWebView.java: it extends the `CordovaWebView` in order to perform properly in our scanner.
-    * Demo.java: it overrides a part of `DroidGap` in order to implement our web view overlay logic.
-    * Resources related to these 2 activity
+[Moodstocks PhoneGap plugin](https://github.com/Moodstocks/moodstocks-phonegap-plugin/) has been configured as a submodule of this repo.
 
 1. Git clone this repo.
 
-2. Open the repo and copy everything inside `www` folder to `android/Demo/assets/www`.
+2. Initialize and update submodule - `plugin`
 
-3. Use your preferred IDE to open the android project.
+  ```console
+  $ git submodule init
+  $ git submodule update
+  ```
 
-4. Set up the Moodstocks SDK in this project.
+3. Open the `www` folder and copy everything into `android/Demo/assets/www/`.
+
+4. Open the `plugin` folder and copy `MoodstocksPlugin.js` into `ios/Demo/www/js/`.
+
+5. Use your preferred IDE to open the android project.
+
+6. Set up the Moodstocks SDK in this project.
 
   > NOTE: a detailed [How-To](https://developers.moodstocks.com/doc/tuto-android/1) can be found in our Developers Center.
-
-5. Open the plugin repo and copy `MoodstocksPlugin.js` into `android/Demo/assets/www/js`.
-
-6. Drag and drop `android/src` folder to your project.
-
-  * Following 3 files will be added to `com.moodstocks.phonegap.plugin`:
-      * MoodstocksPlugin.java
-      * MoodstocksScanActivity.java
-      * MoodstocksOverlay.java
-
-  * `Demo.java` inside `com.moodstocks.phonegap.demo` will be updated.
 
 7. Configure your API key & secret in `MoodstocksPlugin.java` which can be found inside the package `com.moodstocks.phonegap.plugin`
 
@@ -58,6 +48,16 @@ Moodstocks [PhoneGap](http://phonegap.com/) plugin for Android platform enables 
 ## Create your own project from scratch
 
 If you've never used PhoneGap before, please check out their [Android Get Started guide](http://docs.phonegap.com/en/2.5.0/guide_getting-started_android_index.md.html#Getting%20Started%20with%20Android) first!.
+
+0. Get [Moodstocks PhoneGap plugin for Android](https://github.com/Moodstocks/moodstocks-phonegap-plugin/android)
+
+  > NOTE: Our PhoneGap plugin is composed by
+    * MoodstocksPlugin.js
+    * MoodstocksPlugin.java
+    * MoodstocksScanActivity.java
+    * MoodstocksWebView.java: it extends the `CordovaWebView` in order to perform properly in our scanner.
+    * Demo.java: it overrides a part of `DroidGap` in order to implement our web view overlay logic.
+    * Resources related to these 2 activity
 
 1. Create a PhoneGap project, for example:
 

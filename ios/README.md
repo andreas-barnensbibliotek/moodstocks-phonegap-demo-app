@@ -23,15 +23,15 @@ Moodstocks [PhoneGap](http://phonegap.com/) plugin for iOS platform enables deve
   $ git submodule update
   ```
 
-3. Open the repo and copy everything inside `www` folder to `ios/Demo/www`.
+3. Open the `www` folder and copy everything to `ios/Demo/www/`.
 
-4. `open ios/Demo/Demo.xcodeproj/`
+4. Open the `plugin` folder and copy `MoodstocksPlugin.js` into `ios/Demo/www/js/`.
 
-5. Set up [Moodstocks SDK for iOS](https://developers.moodstocks.com/downloads) in this Xcode project.
+5. `open ios/Demo/Demo.xcodeproj/`
+
+6. Set up [Moodstocks SDK for iOS](https://developers.moodstocks.com/downloads) in this Xcode project.
 
   > NOTE: a detailed [How-To](https://developers.moodstocks.com/doc/tuto-ios/1) can be found in our Developers Center.
-
-6. Open the `plugin` folder and copy `MoodstocksPlugin.js` into `ios/Demo/www/js`.
 
 7. Configure your API key and API secret in `Plugins/MoodstocksPlugin.m`.
 
@@ -47,6 +47,15 @@ Moodstocks [PhoneGap](http://phonegap.com/) plugin for iOS platform enables deve
 If you've never used PhoneGap before, please check out their [iOS Get Started guide](http://docs.phonegap.com/en/2.3.0/guide_getting-started_ios_index.md.html#Getting%20Started%20with%20iOS) first!.
 
 Then:
+
+0. Get [Moodstocks PhoneGap plugin for iOS](https://github.com/Moodstocks/moodstocks-phonegap-plugin/ios)
+
+  > NOTE: Our PhoneGap plugin is composed by
+    * MoodstocksPlugin.js
+    * MoodstocksPlugin.{h,m}
+    * Other native resources:
+      * MSScannerController.{h,m}
+      * MSHandler.{h,m}
 
 1. Create a PhoneGap project.
 
