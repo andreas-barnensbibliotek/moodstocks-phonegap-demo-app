@@ -85,7 +85,6 @@ If you've never used PhoneGap before, please check out their [Android Get Starte
     ```xml
     <string name="scan_name">ScanActivity</string>
     ```
-
   * Add activity declaration into your `AndroidManifest.xml`
 
     ```xml
