@@ -25,7 +25,7 @@ Moodstocks [PhoneGap](http://phonegap.com/) plugin for Android platform enables 
 
 3. Open the `www` folder and copy everything into `android/Demo/assets/www/`.
 
-4. Open the `plugin` folder and copy `MoodstocksPlugin.js` into `ios/Demo/www/js/`.
+4. Open the `plugin` folder and copy `MoodstocksPlugin.js` into `android/Demo/www/js/`.
 
 5. Use your preferred IDE to open the android project.
 
@@ -70,7 +70,7 @@ If you've never used PhoneGap before, please check out their [Android Get Starte
 3. Create a package with name `com.moodstocks.phonegap.plugin` and copy these files into it:
   * MoodstocksPlugin.java
   * MoodstocksScanActivity.java
-  * MoodstocksOverlay.java
+  * MoodstocksWebView.java
 
 4. Replace your main activity class `Demo.java` of package `com.example.phonegap.demo` by our `Demo.java` in the plugin folder `android/src/com/moodstocks/phonegap/demo`. It overrides several functions of `DroidGap`
   * Method `init()`
