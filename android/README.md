@@ -28,6 +28,12 @@ Moodstocks [PhoneGap](http://phonegap.com/) plugin for Android platform enables 
 4. Open the `plugin` folder and copy `MoodstocksPlugin.js` into `android/Demo/www/js/`.
 
 5. Use your preferred IDE to open the android project.
+  
+  > Note: this project is created by a former version of ADT, if you are using ADT v22 (or plus), please do the following steps after import project:
+    - Right click on the project and choose Properties
+    - Go to `Java Build Path` -> `Order and Export`
+    - Check the box 'Android Private Libraries'
+    - (Optional) Clean all projects if necessary
 
 6. Set up the Moodstocks SDK in this project.
 
