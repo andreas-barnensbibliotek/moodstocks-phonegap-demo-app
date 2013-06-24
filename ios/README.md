@@ -6,9 +6,9 @@ Moodstocks [PhoneGap](http://phonegap.com/) plugin for iOS platform enables deve
 
 * iOS development environment.
 * A Moodstocks [developer account](https://developers.moodstocks.com/register).
-* [PhoneGap v2.3.0](http://phonegap.com/download/) downloaded.
+* [PhoneGap](http://phonegap.com/download/) downloaded.
 
-> IMPORTANT: the sample application has been tested with PhoneGap v2.3.0. You might encounter some errors if you use a lower version.
+> IMPORTANT: the sample application has been tested with PhoneGap v2.3.0 ~ v.2.8.0. You might encounter some errors if you use a lower version.
 
 ## Test the demo
 
