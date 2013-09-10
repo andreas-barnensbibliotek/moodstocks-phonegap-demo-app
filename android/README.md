@@ -8,7 +8,7 @@ Moodstocks [PhoneGap](http://phonegap.com/) plugin for Android platform enables 
 * A Moodstocks [developer account](https://developers.moodstocks.com/register).
 * [PhoneGap](http://phonegap.com/download/) downloaded.
 
-> IMPORTANT: the sample application has been tested with PhoneGap v2.3.0 ~ v.2.8.0. You might encounter some errors if you use a lower version.
+> IMPORTANT: the sample application has been tested with PhoneGap v2.3.0 ~ v.2.9.0.
 
 ## Test the demo
 
