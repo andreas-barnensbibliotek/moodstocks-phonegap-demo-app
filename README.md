@@ -38,7 +38,12 @@ Instead of using a native overlay to display help information, we take advantage
     > Workaround for the background color issue: Don't put apply any css to the container that you need to toggle.
 
 
-  * If you are looking for something more interactive, for example, display scan result on the overlay, you can check out [our Sencha Touch Demo](https://github.com/Moodstocks/moodstocks-sencha-demo-app).
+Here is a screen shot of our demo with the overlay:
+
+![screenshot_phonegap_demo](http://www.moodstocks.com/wp-content/uploads/2013/04/iphone-IMG_1938.png)
+
+
+If you are looking for something more interactive, for example, display scan result on the overlay, you can check out [our Sencha Touch Demo](https://github.com/Moodstocks/moodstocks-sencha-demo-app).
 
 ## Help
 
