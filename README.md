@@ -40,6 +40,10 @@ Instead of using a native overlay to display help information, we take advantage
 
 Here are some screenshots of our basic PhoneGap demo:
 
+- the 1st screenshot shows the launch panel of scanner
+- the 2nd screenshot shows the overlay on top of the camera (Yes we are scanning the book ***Javascript: The good part***)
+- the 3rd screenshot shows the post-scan redirection: once the object being scanned is recognized, the demo quits the camera and display the result on the scanner panel.
+
 ![screenshot_phonegap_demo](http://www.moodstocks.com/wp-content/uploads/2013/09/phonegap_demo.png)
 
 
